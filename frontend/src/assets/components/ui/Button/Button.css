@@ -1,0 +1,54 @@
+/* Button.css */
+.button {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+}
+
+.button.danger {
+  background-color: #ff4d4d;
+  color: #ffffff;
+  border: 1px solid #ff4d4d;
+}
+
+.button.danger:hover {
+  background-color: #cc0000;
+}
+
+.button.dangerEmpty {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #ff4d4d;
+}
+
+.button.dangerEmpty:hover {
+  background-color: #ff4d4d;
+}
+
+.button.grey {
+  background-color: #999999;
+  color: #ffffff;
+  border: 1px solid #999999;
+}
+
+.button.grey:hover {
+  background-color: #b3b3b3;
+}
+
+.button.small {
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.button.medium {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.button.large {
+  font-size: 14px;
+  padding: 10px 20px;
+}
