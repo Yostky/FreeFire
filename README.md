@@ -27,3 +27,8 @@ rails s - starts rails server
 npm run dev - starts vite server
 
 frontend in development runs on this url - http://localhost:5173
+
+
+bundle exec rails s - starts rails server on mac
+
+use "bundle exec" in front of any "rails" commands to run them on mac
