@@ -32,3 +32,11 @@ frontend in development runs on this url - http://localhost:5173
 bundle exec rails s - starts rails server on mac
 
 use "bundle exec" in front of any "rails" commands to run them on mac
+
+brew services start mysql - starts the mysql server with homebrew
+
+brew services stop mysql - stops the mysql server with homebrew
+
+brew services list - how to check if the server is running 
+
+mysql -u root -p  -------- this opens the mysql dashboard. the password is han's favorite place
