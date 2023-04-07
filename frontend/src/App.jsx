@@ -1,6 +1,8 @@
 import "./App.css";
 import Navbar from "./assets/components/Navbar";
+import Login from "./assets/components/Login";
 import { Button } from "@ui";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /*
 +++++++++++++++++++APPLICATION PAGES++++++++++++++++++++++++++++
@@ -59,10 +61,11 @@ import { Button } from "@ui";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Button dangerEmpty text="Danger Empty" medium />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 

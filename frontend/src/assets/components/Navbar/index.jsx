@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 
-function Navbar() {
+const Navbar = () => {
   console.log("hello");
 
   const grabUserData = async () => {
