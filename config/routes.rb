@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :users 
+      resources :users
+      post 'register', to: 'auth#register'
+      post 'login', to: 'auth#login'
+      post 'refresh_token', to: 'authentication#refresh_token'
     end
-  end
+  end  
 end
