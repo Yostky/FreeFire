@@ -10,4 +10,8 @@ export default defineConfig({
       "@ui": resolve(__dirname, "src/assets/components/ui"),
     },
   },
+  server: {
+    host: '127.0.0.1',
+    // ... other server configurations
+  },
 });
