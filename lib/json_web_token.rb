@@ -12,5 +12,5 @@ class JsonWebToken
     rescue JWT::ExpiredSignature, JWT::VerificationError => e
       raise e
     end
-  end
+end
   

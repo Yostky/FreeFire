@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [name, setName] = useState(null);
   const navigate = useNavigate();
 
   const handleOnClick = async () => {
@@ -14,6 +15,7 @@ const Register = () => {
         user: {
           email: email,
           password: password,
+          name: name,
         },
       });
 
@@ -33,6 +35,15 @@ const Register = () => {
     <div className="container">
       <form className="form">
         <h2>Register</h2>
+        <div className="form-group">
+          <input
+            type="name"
+            className="form-control"
+            id="name"
+            placeholder="Enter name"
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
         <div className="form-group">
           <input
             type="email"

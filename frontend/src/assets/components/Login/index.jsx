@@ -16,9 +16,9 @@ const Login = () => {
         email,
         password,
       });
-      const { token } = response.data;
+      const { token, user_id } = response.data;
       localStorage.setItem("jwt", token);
-      navigate("/main");
+      navigate(`/profile/${user_id}`);
     } catch (error) {
       console.error("Login error:", error);
     }
