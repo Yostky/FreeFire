@@ -1,0 +1,39 @@
+.input-container {
+  display: block;
+  width: 100%;
+}
+
+.input-label {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.input-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  flex-grow: 1;
+  background-color: #232629;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: larger;
+}
+
+.submit-button {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4b72e3;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #3b62d3;
+}

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :users
       post 'register', to: 'auth#register'
       post 'login', to: 'auth#login'
-      post 'refresh_token', to: 'authentication#refresh_token'
+      post 'refresh_token', to: 'auth#refresh_token'
     end
   end  
 end

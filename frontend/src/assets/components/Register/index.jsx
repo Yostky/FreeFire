@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Register.css";
+import styles from "./Register.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -32,45 +32,39 @@ const Register = () => {
   };
 
   return (
-    <div className="container">
-      <form className="form">
-        <h2>Register</h2>
-        <div className="form-group">
-          <input
-            type="name"
-            className="form-control"
-            id="name"
-            placeholder="Enter name"
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="Enter email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={handleOnClick}
-        >
-          Register
-        </button>
-      </form>
-    </div>
+    <form className={styles.form}>
+      <h2>Register</h2>
+      <div className={styles.formGroup}>
+        <input
+          type="name"
+          className={styles.formControl}
+          id="name"
+          placeholder="Enter name"
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+      <div className={styles.formGroup}>
+        <input
+          type="email"
+          className={styles.formControl}
+          id="email"
+          placeholder="Enter email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className={styles.formGroup}>
+        <input
+          type="password"
+          className={styles.formControl}
+          id="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <button type="button" className={styles.btn} onClick={handleOnClick}>
+        Register
+      </button>
+    </form>
   );
 };
 
