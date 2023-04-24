@@ -1,0 +1,42 @@
+.settings {
+  width: 40rem;
+  height: auto;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 650px) {
+  .settings {
+    width: 20rem;
+  }
+}
+
+.card {
+  background-color: #2c2f33;
+  border-radius: 5px;
+  width: 100%;
+  margin: auto;
+}
+
+.info {
+  text-align: left;
+  padding: 1rem;
+}
+.row {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  align-items: center;
+}
+.labelArea p {
+  padding: 0;
+  margin: 0 !important;
+}
+.labelArea label {
+  color: #d7d7d7;
+  font-size: 12px;
+}

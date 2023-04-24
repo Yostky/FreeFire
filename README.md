@@ -1,46 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ensure you start the rails server first. Then cd into 'frontend' before running the vite start server command.
 
-Things you may want to cover:
-
-- Ruby version
-
-- System dependencies
-
-- Configuration
-
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
-
+brew services start mysql - starts the mysql server with homebrew
+brew services stop mysql - stops the mysql server with homebrew
 rails s - starts rails server
 npm run dev - starts vite server
 
-frontend in development runs on this url - http://localhost:5173
-
-bundle exec rails s - starts rails server on mac
-
-use "bundle exec" in front of any "rails" commands to run them on mac
-
-brew services start mysql - starts the mysql server with homebrew
-
-brew services stop mysql - stops the mysql server with homebrew
-
-brew services list - how to check if the server is running
-
-mysql -u root -p -------- this opens the mysql dashboard. the password is han's favorite place
-
-Resume generator idea:
-
-Need a way to import PDFs, scrape the text off of them, then transmit that data to
-a new PDF in the format provided by the website.
+backend in development runs on port 3000
+frontend in development runs on port 5173
