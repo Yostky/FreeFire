@@ -4,6 +4,8 @@ import "./Button.css";
 const Button = ({
   danger,
   dangerEmpty,
+  blue,
+  blueEmpty,
   grey,
   text,
   small,
@@ -15,6 +17,8 @@ const Button = ({
     let className = "button";
     if (danger) className += " danger";
     if (dangerEmpty) className += " dangerEmpty";
+    if (blue) className += " blue";
+    if (blueEmpty) className += " blueEmpty";
     if (grey) className += " grey";
     if (small) className += " small";
     if (medium) className += " medium";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Login.css";
+import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -18,41 +18,51 @@ const Login = () => {
       });
       const { token, user_id } = response.data;
       localStorage.setItem("jwt", token);
-      navigate(`/profile/${user_id}`);
+      navigate(`/settings/${user_id}`);
     } catch (error) {
       console.error("Login error:", error);
     }
   };
 
   return (
-    <div className="container">
-      <form className="form" onSubmit={handleLogin}>
-        <h2>Login</h2>
-        <div className="form-group">
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
-    </div>
+    <form className={styles.form} onSubmit={handleLogin}>
+      <h2>Login</h2>
+      <div className={styles.formGroup}>
+        <input
+          type="email"
+          className={styles.formControl}
+          id="email"
+          placeholder="Enter email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className={styles.formGroup}>
+        <input
+          type="password"
+          className={styles.formControl}
+          id="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <p className={styles.signupText}>
+        Don't have an account?{" "}
+        <a
+          href="/register"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/register");
+          }}
+        >
+          Signup
+        </a>
+      </p>
+      <button type="submit" className={styles.btn}>
+        Submit
+      </button>
+    </form>
   );
 };
 
